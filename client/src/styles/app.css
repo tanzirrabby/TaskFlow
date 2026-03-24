@@ -1,0 +1,97 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0b1020;
+  color: #eef2ff;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.content-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.board-column {
+  background: #17203a;
+  border: 1px solid #2b3a68;
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.tasks-list {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.task-card {
+  background: #1f2b4d;
+  border: 1px solid #33467f;
+  border-radius: 10px;
+  padding: 0.75rem;
+  cursor: grab;
+}
+
+.task-card h4 {
+  margin: 0 0 0.3rem;
+}
+
+.task-card p {
+  margin: 0.2rem 0;
+  font-size: 0.88rem;
+}
+
+.activity-feed {
+  background: #121a30;
+  border: 1px solid #2b3a68;
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.activity-feed ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.activity-feed li {
+  background: #1b2748;
+  border: 1px solid #344880;
+  border-radius: 10px;
+  padding: 0.6rem;
+}
+
+@media (max-width: 900px) {
+  .content-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .board-grid {
+    grid-template-columns: 1fr;
+  }
+}
